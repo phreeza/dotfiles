@@ -1,0 +1,8 @@
+case "$1" in 
+    *vim*)
+    __EXECUTED_GIT_COMMAND=1
+    ;;
+    git*)
+    __EXECUTED_GIT_COMMAND=1
+    ;;
+esac

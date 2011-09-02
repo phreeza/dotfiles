@@ -1,0 +1,10 @@
+[user]
+	name = Thomas McColgan
+  email = thomas.mccolgan@gmail.com
+
+[alias]
+  st = status
+  co = checkout
+  ci = commit
+  cdiff = diff --cached
+  lg = log --graph --decorate --branches --abbrev-commit
