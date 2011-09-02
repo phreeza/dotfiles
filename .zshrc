@@ -35,4 +35,7 @@ chpwd_functions+='chpwd_update_git_vars'
 
 export PROMPT='$(prompt_git_info)%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$fg[green]%} [ %~ ]%b%{$reset_color%} %# '
 
-source ~/.zsh_profile
+#load local variables if they exist
+if [ -e ~/.zsh_profile ]; then
+  source ~/.zsh_profile
+fi
