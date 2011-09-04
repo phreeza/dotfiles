@@ -62,4 +62,6 @@ nnoremap <silent> <C-t> :tabnew<CR>
 filetype plugin indent on
 syntax on
 
-
+"fix backspace on mac
+set backspace=indent,eol,start
+fixdel
