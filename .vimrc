@@ -62,4 +62,4 @@ nnoremap <silent> <C-t> :tabnew<CR>
 filetype plugin indent on
 syntax on
 
-
+colorscheme desert
