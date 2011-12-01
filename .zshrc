@@ -1,5 +1,7 @@
 autoload colors; colors
 
+export EDITOR="/usr/bin/vim"
+
 # number of lines kept in history
 export HISTSIZE=1000
 # number of lines saved in the history after logout

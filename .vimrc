@@ -65,3 +65,4 @@ syntax on
 "fix backspace on mac
 set backspace=indent,eol,start
 fixdel
+colorscheme desert
