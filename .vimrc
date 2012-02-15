@@ -70,3 +70,13 @@ colorscheme desert
 "Some stuff for latexsuite
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+
+"Disable arrow keys
+nmap <right> <nop>
+nmap <left> <nop>
+nmap <up> <nop>
+nmap <down> <nop>
+imap <right> <nop>
+imap <left> <nop>
+imap <up> <nop>
+imap <down> <nop>
