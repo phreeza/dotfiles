@@ -66,3 +66,7 @@ syntax on
 set backspace=indent,eol,start
 fixdel
 colorscheme desert
+
+"Some stuff for latexsuite
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
