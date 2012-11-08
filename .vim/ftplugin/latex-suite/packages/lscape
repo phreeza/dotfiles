@@ -1,1 +1,10 @@
-/usr/share/vim/addons/ftplugin/latex-suite/packages/lscape
+if exists("lscape_package_file")
+	finish
+endif
+let lscape_package_file = 1
+
+let g:TeX_package_option_lscape = ''
+
+let g:TeX_package_lscape = 'env:landscape'
+
+" vim:ft=vim:ff=unix:

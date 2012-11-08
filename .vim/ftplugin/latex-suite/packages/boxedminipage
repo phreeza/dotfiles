@@ -1,1 +1,10 @@
-/usr/share/vim/addons/ftplugin/latex-suite/packages/boxedminipage
+if exists("boxedminipage_package_file")
+	finish
+endif
+let boxedminipage_package_file = 1
+
+let g:TeX_package_option_boxedminipage = ''
+
+let g:TeX_package_boxedminipage = 'ens:boxedminipage:[<+pos+>]{<+size+>}'
+
+" vim:ft=vim:ff=unix:

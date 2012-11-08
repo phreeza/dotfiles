@@ -1,1 +1,17 @@
-/usr/share/vim/addons/ftplugin/latex-suite/packages/array
+if exists("array_package_file")
+	finish
+endif
+let array_package_file = 1
+
+let g:TeX_package_option_array = ''
+
+let g:TeX_package_array  = 
+\ 'brs:newcolumntype{<+type+>}[<+no+>]{<+preamble+>},'
+\.'arraycolsep,'
+\.'tabcolsep,'
+\.'arrayrulewidth,'
+\.'doublerulesep,'
+\.'arraystretch,'
+\.'extrarowheight'
+
+" vim:ft=vim:ff=unix:
