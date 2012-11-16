@@ -48,4 +48,4 @@ macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred mes
 macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 
 #source colors
-source .mutt/muttcolors
+source ~/.mutt/muttcolors
