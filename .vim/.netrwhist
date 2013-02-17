@@ -1,5 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/tom/work/pogo/web/app'
-let g:netrw_dirhist_2='/Users/tom/work/pogo/web/app/users'
-let g:netrw_dirhist_3='/Users/tom/work/pogo/web/app'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/tom/Dropbox/work/owls/Linear Model/paper_figs/csv'
+let g:netrw_dirhist_2='/Users/tom/Dropbox/work/owls/Linear Model/paper_figs'
