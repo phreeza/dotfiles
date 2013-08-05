@@ -52,3 +52,8 @@ esac
 if [ -e ~/.zsh_profile ]; then
   source ~/.zsh_profile
 fi
+
+#need to bind this explicitly
+bindkey -v
+bindkey '\e[3~' delete-char
+bindkey '^R' history-incremental-search-backward
