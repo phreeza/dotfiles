@@ -8,3 +8,8 @@
   ci = commit
   cdiff = diff --cached
   lg = log --graph --decorate --branches --abbrev-commit
+	dt = difftool
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false

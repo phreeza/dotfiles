@@ -1,7 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/tom/work/pogo/web/app'
-let g:netrw_dirhist_2='/Users/tom/work/pogo/web/app/users'
-let g:netrw_dirhist_3='/Users/tom/work/pogo/web/app'
-let g:netrw_dirhist_4='/extra/mccolgan/work/linmod-paper-figures/csv'
-let g:netrw_dirhist_5='/extra/mccolgan/work/linmod-paper-figures/csv/268_3k'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/extra/mccolgan/local/share/nrn'
+let g:netrw_dirhist_2='/extra/mccolgan/local/share/nrn/examples'
+let g:netrw_dirhist_3='/extra/mccolgan/local/share/nrn/examples/nrniv'
+let g:netrw_dirhist_4='/extra/mccolgan/local/share/nrn/examples/nrniv/netcon'
+let g:netrw_dirhist_5='/extra/mccolgan/work/pyPhonic'
+let g:netrw_dirhist_6='/extra/mccolgan/work'
+let g:netrw_dirhist_7='/extra/mccolgan/work/pyPhonic'
+let g:netrw_dirhist_8='/extra/mccolgan/Hermann_Data_2000_2001'
