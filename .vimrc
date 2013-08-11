@@ -65,7 +65,9 @@ syntax on
 "fix backspace on mac
 set backspace=indent,eol,start
 fixdel
-colorscheme desert
+colorscheme solarized
+set background=dark
+set t_Co=16
 
 "Some stuff for latexsuite
 set grepprg=grep\ -nH\ $*
