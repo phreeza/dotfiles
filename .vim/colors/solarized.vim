@@ -229,7 +229,10 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let colors_name = "solarized"
+let g:colors_name = "solarized"
+if !exists("g:colors_background")
+  let g:colors_background = &background
+endif
 
 "}}}
 " GUI & CSApprox hexadecimal palettes"{{{
@@ -987,7 +990,7 @@ hi! link pandocMetadataTitle             pandocMetadata
 " mode (detected with the script scope s:vmode variable). It also allows for 
 " other potential terminal customizations that might make gui mode suboptimal.
 "
-autocmd GUIEnter * if (s:vmode != "gui") | exe "colorscheme " . g:colors_name | endif
+autocmd GUIEnter * if (s:vmode != "gui") | exe "colorscheme " . g:colors_name | exe "set background=" . g:colors_background | endif
 "}}}
 " Highlight Trailing Space {{{
 " Experimental: Different highlight when on cursorline
