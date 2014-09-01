@@ -28,7 +28,8 @@ set foldmethod=marker
 
 filetype on
 filetype plugin on
-syntax enable
+filetype plugin indent on
+
 set grepprg=grep\ -nH\ $*
 
 set expandtab
@@ -59,15 +60,17 @@ nnoremap <silent> <C-t> :tabnew<CR>
 "set undolevels = 1000 "maximum number of changes that can be undone
 "set undoreload = 10000 "maximum number lines to save for undo on a buffer reload
 
-filetype plugin indent on
-syntax on
 
 "fix backspace on mac
 set backspace=indent,eol,start
 fixdel
-colorscheme solarized
+
+"solarized colorscheme
+set t_Co=256
+syntax enable
+let g:solarized_termcolors=256
 set background=dark
-set t_Co=16
+colorscheme solarized
 
 "Some stuff for latexsuite
 set grepprg=grep\ -nH\ $*
