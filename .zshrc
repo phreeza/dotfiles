@@ -1,6 +1,6 @@
 autoload colors; colors
 
-export EDITOR="/usr/bin/vim"
+export EDITOR="/usr/bin/env vim"
 
 # number of lines kept in history
 export HISTSIZE=1000
