@@ -25,6 +25,8 @@ NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'JuliaLang/julia-vim'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'plasticboy/vim-markdown'
 
 call neobundle#end()
 

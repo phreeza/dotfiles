@@ -79,6 +79,7 @@ TPartView	latex-suite.txt	/*TPartView*
 TSection	latex-suite.txt	/*TSection*
 TSectionAdvanced	latex-suite.txt	/*TSectionAdvanced*
 TTemplate	latex-suite.txt	/*TTemplate*
+Tabular.txt	Tabular.txt	/*Tabular.txt*
 Tex_AutoFolding	latex-suite.txt	/*Tex_AutoFolding*
 Tex_BIBINPUTS	latex-suite.txt	/*Tex_BIBINPUTS*
 Tex_CatchVisMapErrors	latex-suite.txt	/*Tex_CatchVisMapErrors*
@@ -1075,7 +1076,13 @@ tab>	latexhelp.txt	/*tab>*
 tab`	latexhelp.txt	/*tab`*
 taba	latexhelp.txt	/*taba*
 tabbing	latexhelp.txt	/*tabbing*
+tabular	Tabular.txt	/*tabular*
 tabular	latexhelp.txt	/*tabular*
+tabular-intro	Tabular.txt	/*tabular-intro*
+tabular-scripting	Tabular.txt	/*tabular-scripting*
+tabular-toc	Tabular.txt	/*tabular-toc*
+tabular-walkthrough	Tabular.txt	/*tabular-walkthrough*
+tabular.vim	Tabular.txt	/*tabular.vim*
 theorem	latexhelp.txt	/*theorem*
 titlepage	latexhelp.txt	/*titlepage*
 toggle-background	solarized.txt	/*toggle-background*

@@ -1,5 +1,7 @@
 julia-vim
 neobundle.vim
+tabular
 vim-colors-solarized
 vim-latex
+vim-markdown
 vim-python-pep8-indent
