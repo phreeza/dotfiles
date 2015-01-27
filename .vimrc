@@ -1,3 +1,42 @@
+"NeoBundle stuff
+
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+
+NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'hynek/vim-python-pep8-indent'
+NeoBundle 'JuliaLang/julia-vim'
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+" End NeoBundle
+
 augroup JumpCursorOnEdit
    au!
    autocmd BufReadPost *
@@ -26,9 +65,9 @@ augroup END
 set nocompatible
 set foldmethod=marker
 
-filetype on
-filetype plugin on
-filetype plugin indent on
+"filetype on
+"filetype plugin on
+"filetype plugin indent on
 
 set grepprg=grep\ -nH\ $*
 
@@ -75,43 +114,13 @@ imap <left> <nop>
 imap <up> <nop>
 imap <down> <nop>
 
-"NeoBundle stuff
-
-" Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
-
-if has('vim_starting')
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-
-" NeoBundle 'lervag/vim-latex'
-NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
-NeoBundle 'altercation/vim-colors-solarized'
-
-call neobundle#end()
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
 
 "solarized colorscheme
 set t_Co=256
 syntax enable
 let g:solarized_termcolors=256
-set background=dark
 colorscheme solarized
+set background=dark
 
 "Some stuff for latexsuite
 set grepprg=grep\ -nH\ $*
