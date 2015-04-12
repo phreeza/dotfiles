@@ -26,7 +26,8 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'JuliaLang/julia-vim'
 NeoBundle 'godlygeek/tabular'
-NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'vim-pandoc/vim-pandoc'
+NeoBundle 'vim-pandoc/vim-pandoc-syntax'
 
 call neobundle#end()
 
