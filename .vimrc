@@ -22,12 +22,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Note: You don't set neobundle setting in .gvimrc!
 
 NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'JuliaLang/julia-vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'vim-pandoc/vim-pandoc'
 NeoBundle 'vim-pandoc/vim-pandoc-syntax'
+NeoBundle 'altercation/vim-colors-solarized'
 
 call neobundle#end()
 
