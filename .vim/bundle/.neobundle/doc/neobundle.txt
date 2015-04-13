@@ -150,7 +150,9 @@ neobundle#begin([{base-path}])			*neobundle#begin()*
 		"has('vim_starting')" block.
 >
 	if has('vim_starting')
-	  set nocompatible
+	  if &compatible
+	    set nocompatible
+	  endif
 	  set runtimepath+={path to neobundle directory}
 	endif
 
@@ -317,17 +319,23 @@ neobundle#config({options})
 neobundle#tap({bundle-name})			 *neobundle#tap()*
 		Initialize |neobundle#tapped| and |neobundle#hooks| variable
 		as {bundle-name} bundle.
-		It returns non-zero if {bundle-name} is exists.
+		It returns non-zero if {bundle-name} is exists and not
+		disabled.
 
 neobundle#untap()				 *neobundle#untap()*
 		Clear current |neobundle#tapped| and |neobundle#hooks| variable.
 
 neobundle#has_cache()			 *neobundle#has_cache()*
-		Checks if a cache file is generated.
+		Checks if a cache file is available.
 		You can optimize the .vimrc loading time by using it
 		together with |:NeoBundleLoadCache|.
-		Note: You must clear the cache by using |:NeoBundleClearCache|
-		if the neobundle configuration is changed.
+
+		The default cache location can be overridden through
+		|g:neobundle#cache_file|.
+
+		Note: to clear the cache use |:NeoBundleClearCache|,
+		or use |neobundle#commands#has_fresh_cache()| when
+		checking for it.
 >
 	if neobundle#has_cache()
 	  NeoBundleLoadCache
@@ -519,6 +527,14 @@ COMMANDS 					*neobundle-commands*
 ------------------------------------------------------------------------------
 VARIABLES 					*neobundle-variables*
 
+g:neobundle#cache_file				*g:neobundle#cache_file*
+		The cache file to use.
+
+		The default is provided through
+		neobundle#commands#get_default_cache_file():
+>
+		neobundle#get_rtp_dir() . '/cache'
+<
 neobundle#tapped				*neobundle#tapped*
 		Current bundle variable set by |neobundle#tap()|.
 
@@ -757,9 +773,13 @@ OPTIONS 					*neobundle-options*
 		Specify the script type. It is useful for non-official
 		categorized plugins.
 		For example: "indent", "plugin", "ftplugin", ...
+		Note: You must not specify it for categorized plugins.
 		Example:
 >
-		NeoBundle 'bronzehedwick/impactjs-colorscheme', {'script_type' : 'colors'}
+		NeoBundle 'https://raw.github.com/m2ym/rsense/master/etc/rsense.vim',
+		\ {'script_type' : 'plugin'}
+		NeoBundle 'https://github.com/bronzehedwick/impactjs-colorscheme',
+		\ {'script_type' : 'colorscheme'}
 <
 						*neobundle-options-site*
 		site			(String)
@@ -967,7 +987,7 @@ OPTIONS 					*neobundle-options*
 						*neobundle-options-disabled*
 		disabled		(Number)
 		If set to 1, neobundle will disable the plugin.
-		Note: Disabled plugins are ignored when install/update
+		Note: Disabled plugins are not ignored when install/update
 		plugins.
 
 		Example: >
@@ -1290,7 +1310,9 @@ EXAMPLES					*neobundle-examples*
 	if !1 | finish | endif
 
 	if has('vim_starting')
-	  set nocompatible                " Recommend
+	  if &compatible
+	    set nocompatible               " Be iMproved
+	  endif
 	  set runtimepath+={path to neobundle directory}
 	endif
 
@@ -1303,7 +1325,7 @@ EXAMPLES					*neobundle-examples*
 	NeoBundleFetch 'Shougo/neobundle.vim'
 
 	" Use neobundle standard recipes.
-	NeoBundle 'Shougo/neobundle-vim-recipes'
+	NeoBundle 'Shougo/neobundle-vim-recipes', {'force' : 1}
 
 	" My Bundles here:
 	" Refer to |:NeoBundle-examples|.
@@ -1474,8 +1496,9 @@ The standard recipes are in "neobundle-vim-recipes".
 https://github.com/Shougo/neobundle-vim-recipes
 
 You can use the recipes with the following command in .vimrc.
+Note: You must use "force" option for "neobundle-vim-recipes".
 >
-	NeoBundle 'Shougo/neobundle-vim-recipes'
+	NeoBundle 'Shougo/neobundle-vim-recipes', {'force' : 1}
 <
 
 The recipe files are in JSON format, like this:
@@ -1736,5 +1759,13 @@ https://github.com/Shougo/neobundle.vim/issues/330
 A: You must use the functions after |neobundle#end()|.
 Because, the plugins are loaded when neobundle calls |neobundle#end()|.
 
+Q: Fails submoduled repository clone like YouCompleteMe.
+
+A: I think you use the submodule repository in proxy environment.
+
+https://github.com/ekg/freebayes/issues/63
+>
+	$ git config --global url.https://github.com/.insteadOf git://github.com/
+<
 ==============================================================================
 vim:tw=78:ts=8:ft=help:norl:noet:fen:

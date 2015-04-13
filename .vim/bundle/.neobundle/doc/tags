@@ -420,6 +420,7 @@ g:latex_to_unicode_file_types	julia-vim.txt	/*g:latex_to_unicode_file_types*
 g:latex_to_unicode_file_types_blacklist	julia-vim.txt	/*g:latex_to_unicode_file_types_blacklist*
 g:latex_to_unicode_suggestions	julia-vim.txt	/*g:latex_to_unicode_suggestions*
 g:latex_to_unicode_tab	julia-vim.txt	/*g:latex_to_unicode_tab*
+g:neobundle#cache_file	neobundle.txt	/*g:neobundle#cache_file*
 g:neobundle#default_options	neobundle.txt	/*g:neobundle#default_options*
 g:neobundle#default_site	neobundle.txt	/*g:neobundle#default_site*
 g:neobundle#enable_name_conversion	neobundle.txt	/*g:neobundle#enable_name_conversion*
