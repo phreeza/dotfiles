@@ -3,5 +3,6 @@ neobundle.vim
 tabular
 vim-colors-solarized
 vim-latex
-vim-markdown
+vim-pandoc
+vim-pandoc-syntax
 vim-python-pep8-indent
