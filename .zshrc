@@ -44,7 +44,10 @@ case `uname` in
     ;;
   Linux)
     alias ls='ls -F --color=auto'
-    alias gopen='gnome-open'
+    gopen () {
+      gnome-open $1 2>/dev/null
+      return
+    }
     ;;
 esac
 
