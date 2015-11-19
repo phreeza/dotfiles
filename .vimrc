@@ -25,9 +25,14 @@ NeoBundle 'git://git.code.sf.net/p/vim-latex/vim-latex'
 NeoBundle 'hynek/vim-python-pep8-indent'
 NeoBundle 'JuliaLang/julia-vim'
 NeoBundle 'godlygeek/tabular'
-NeoBundle 'vim-pandoc/vim-pandoc'
-NeoBundle 'vim-pandoc/vim-pandoc-syntax'
+NeoBundle 'YorickPeterse/Autumn.vim'
+if v:version > 703
+  NeoBundle 'vim-pandoc/vim-pandoc'
+else
+  NeoBundle 'vim-pandoc/vim-pandoc-syntax', '7.3'
+endif
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'farseer90718/vim-taskwarrior'
 
 call neobundle#end()
 
@@ -128,4 +133,8 @@ set background=dark
 "Some stuff for latexsuite
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
+
+"Use pandoc for markdown files by default
+au BufNewFile,BufRead *.md   set filetype=markdown.pandoc
+
 
