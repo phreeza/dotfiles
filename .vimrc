@@ -33,6 +33,7 @@ else
 endif
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'farseer90718/vim-taskwarrior'
+NeoBundle 'elzr/vim-json'
 
 call neobundle#end()
 
@@ -83,9 +84,9 @@ set expandtab
 set smarttab
 
 " Who wants an 8 character tab?  Not me!
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 
 set wildmenu
 set wildmode=list:longest,full
@@ -136,5 +137,8 @@ let g:tex_flavor='latex'
 
 "Use pandoc for markdown files by default
 au BufNewFile,BufRead *.md   set filetype=markdown.pandoc
+
+"use JSON formating for params files
+au BufNewFile,BufRead *.params   set filetype=json
 
 
