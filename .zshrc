@@ -69,3 +69,6 @@ bindkey -M viins "\e[A" up-line-or-history
 bindkey -M viins "\e[B" down-line-or-history
 bindkey -M viins "\eOA" up-line-or-history
 bindkey -M viins "\eOB" down-line-or-history
+
+# alias for taskwarrior work
+alias twork='task +work'
