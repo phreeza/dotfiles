@@ -1,8 +1,10 @@
+Autumn.vim
 julia-vim
 neobundle.vim
 tabular
 vim-colors-solarized
+vim-json
 vim-latex
-vim-pandoc
 vim-pandoc-syntax
 vim-python-pep8-indent
+vim-taskwarrior

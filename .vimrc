@@ -140,5 +140,3 @@ au BufNewFile,BufRead *.md   set filetype=markdown.pandoc
 
 "use JSON formating for params files
 au BufNewFile,BufRead *.params   set filetype=json
-
-
